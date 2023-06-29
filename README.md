@@ -34,7 +34,9 @@ You will want to modify `test.mjs` and change the following stuff at a minimum:
 
 1) the stuff passed in to `re.init()`
 2) the stuff passed to `re.play()`
-
+3) You may want to modify the settings logic in `lib.mjs` -- Roon extensions can export settings UI that can be set up in Roon, making configuring this program easier.
+4) Normally, the extension will save all state and configuration options to a `config.json` in the directory where it was started. You will need to override RoonApi.prototype.save_config/load_config if you want to change this behavior.
+   
 You will probably want to modify the following:
 
 3) `const logger =`
