@@ -1,14 +1,17 @@
 Roon Connect Stream Example
 ==
 
-Running this sample:
+
+## Quick start guide
+
+### Running this sample
 
 ```sh
 npm install
 node ./test.mjs
 ```
 
-Then to get it going:
+### Getting it connected to Roon
 
 1. Open Roon
 2. In Roon, go to Settings > Extensions
@@ -16,7 +19,10 @@ Then to get it going:
 4. Hit the `Settings` button (it's where the `Enable` button used to be located), and select the audio output you want this example to stream to.
 5. Go back to Home in Roon make sure Roon has that audio output selected in the bottom bar. This will be useful to see stuff when you start playing audio.
 
-Now, back in the console where you ran this sample:
+
+### Using it
+
+Back in the console where you ran this sample:
 
 1. Hit enter a few times and make sure you see the prompt.
 2. You can type `play http://strm112.1.fm/dubstep_mobile_mp3` and hit enter. It will take a few seconds to start streaming/buffering, but you should hear Roon playing this stream and see your brand taking over the bottom bar.
