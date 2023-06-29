@@ -24,6 +24,20 @@ node ./test.mjs
 
 Back in the console where you ran this sample:
 
-1. Hit enter a few times and make sure you see the prompt.
+1. Hit enter a few times to ensure you see the prompt.
 2. You can type `play http://strm112.1.fm/dubstep_mobile_mp3` and hit enter. It will take a few seconds to start streaming/buffering, but you should hear Roon playing this stream and see your brand taking over the bottom bar.
 3. You can type `help` for more commands.
+
+## Turning this into something real
+
+You will want to modify `test.mjs` and change the following stuff at a minimum:
+
+1) the stuff passed in to `re.init()`
+2) the stuff passed to `re.play()`
+3) You may want to modify the settings logic in `lib.mjs` -- Roon extensions can export settings UI that can be set up in Roon, making configuring this program easier.
+4) Normally, the extension will save all state and configuration options to a `config.json` in the directory where it was started. You will need to override RoonApi.prototype.save_config/load_config if you want to change this behavior.
+   
+You will probably want to modify the following:
+
+3) `const logger =`
+4) remove all the interactive prompt stuff
