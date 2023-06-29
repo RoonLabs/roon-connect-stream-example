@@ -3,7 +3,7 @@ Roon Connect Stream Example
 
 Running this sample:
 
-```js
+```sh
 npm install
 node ./test.mjs
 ```
