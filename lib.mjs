@@ -237,5 +237,7 @@ export function stop() {
     if (_v.session) {
         _v.session.end_session((msg, body) => { });
         delete(_v.session);
+    } else {
+        _doevent("stopped");
     }
 }
