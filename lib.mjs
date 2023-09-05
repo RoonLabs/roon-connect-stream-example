@@ -215,6 +215,10 @@ export function play({
                         _doevent("stopped");
                     } else if (m.name == 'EndedNaturally' || m.name == 'MediaError') {
                         _doevent("stopped");
+                    } else if (m.name == 'Paused') {
+                        _doevent("stopped");
+                    } else if (m.name == 'ZoneNotFound' || m.name == 'ZoneLost') {
+                        _doevent("no_zone");
                     } else {
                         _log(`GOT unexpected msg from play: ${JSON.stringify(m)} / ${JSON.stringify(b)}`);
                     }
